@@ -1,73 +1,129 @@
+/* kept as you wrote it: .root (not :root) */
+.root {
+  font-family: 'Roboto';
+}
+
+/* container */
 .auth-Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 95vh;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  width: 100%;
 }
 
+/* form (kept your original vh sizing and padding) */
 .auth-Form {
-    width: 25vh;
-    padding: 15vh;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
+  width: 25vh;
+  padding: 15vh;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
 }
 
-.auth-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -50px 0 50px;
+/* logo */
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -60px 0 40px;
 }
 
-.auth-logo img{
-    width: 150px;
-    height: auto;
-    display: block;
+.auth-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
 }
 
+/* inputs wrapper */
 .auth-inputs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -10%;
 }
 
+/* placeholder opacity */
+.auth-inputs input::placeholder {
+  opacity: 0.6;
+}
+
+/* input fields */
 .auth-input {
-    width: 30vh;
-    max-width: 320px;
-    padding: 10px;
-    margin: 8px 0 16px 0;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+  width: 30vh;
+  max-width: 320px;
+  padding: 10px 15px;
+  margin: 8px 0 16px 0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
+  background-clip: padding-box; /* keeps rounded corners rendering correct */
 }
 
+/* focus state */
+.auth-input:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
+}
+
+/* labels inside inputs block */
 .auth-inputs label {
-    margin-right: 100%; 
-    font-weight: bold;
+  margin-right: 100%;
+  font-weight: bold;
 }
 
-.auth-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0 -50px;
+/* gradient text helpers (kept on each ID as you had) */
+/* Username label gradient */
+#label-username {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 242, 0, 1) 0%,
+    rgba(255, 110, 0, 1) 75%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 16px;
 }
 
-.auth-button button{
-    background: none;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
-    border-radius: 15px;
-    padding: 8px 35px;
-    font-size: 15px;
+/* Password label gradient */
+#label-password {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 255, 247, 1) 0%,
+    rgba(7, 128, 251, 1) 75%,
+    rgba(13, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 16px;
 }
 
+/* button container */
+.auth-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 -50px;
+}
 
+/* button */
+.auth-button button {
+  background: none;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
+  border-radius: 15px;
+  padding: 8px 35px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 525;
+}
 
-
-
-
-
-
+/* hover */
+.auth-button button:hover {
+  background: rgba(145, 145, 145, 0.1);
+}
